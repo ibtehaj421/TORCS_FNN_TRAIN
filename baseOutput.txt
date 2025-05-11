@@ -1,0 +1,121 @@
+===== Advanced TORCS Controller with LSTM =====
+Using device: cuda
+Processing dataset with advanced features...
+Initial dataset size: 234655
+Filtering out static/idle rows...
+After Speed X filter: 231490 rows (98.65% remaining)
+Found negative CurLapTime values, shifting to positive...
+Final dataset size after filtering: 231490
+Dataset size after filtering: 231490
+Processed dataset with 29 input features and 4 outputs
+Input features: ['Angle', 'CurLapTime', 'Damage', 'DistFromStart', 'DistRaced', 'Fuel', 'Gear', 'LastLapTime', 'RPM', 'Speed X', 'Speed Y', 'Speed Z', 'TrackPos', 'Z', 'track_left', 'track_center_left', 'track_center', 'track_center_right', 'track_right', 'track_asymmetry', 'wheel_fl', 'wheel_fr', 'wheel_rl', 'wheel_rr', 'wheel_front_diff', 'wheel_rear_diff', 'focus_closest', 'speed_magnitude', 'lateral_g']
+Dataset processed: 231490 samples with 29 features
+Training set: 185192 samples, Validation set: 46298 samples
+Preparing sequential data with sequence length 10...
+X_train_seq shape: (185182, 10, 29), y_train_seq shape: (185182, 4)
+X_val_seq shape: (46288, 10, 29), y_val_seq shape: (46288, 4)
+Sequential data shape: (185182, 10, 29), (185182, 4)
+Creating LSTM model with 29 inputs, 128 hidden units, 2 layers, and 4 outputs
+Training LSTM model for 100 epochs with batch size 64...
+Epoch 1/100, Train Loss: 0.5683, Val Loss: 0.4295, Time: 17.62s, LR: 0.001000
+Epoch 2/100, Train Loss: 0.4717, Val Loss: 0.3963, Time: 17.42s, LR: 0.001000
+Epoch 3/100, Train Loss: 0.4493, Val Loss: 0.3705, Time: 17.36s, LR: 0.001000
+Epoch 4/100, Train Loss: 0.4320, Val Loss: 0.3504, Time: 17.58s, LR: 0.001000
+Epoch 5/100, Train Loss: 0.4206, Val Loss: 0.3388, Time: 17.74s, LR: 0.001000
+Epoch 6/100, Train Loss: 0.4103, Val Loss: 0.3282, Time: 17.99s, LR: 0.001000
+Epoch 7/100, Train Loss: 0.3990, Val Loss: 0.3209, Time: 17.47s, LR: 0.001000
+Epoch 8/100, Train Loss: 0.3920, Val Loss: 0.3202, Time: 17.12s, LR: 0.001000
+Epoch 9/100, Train Loss: 0.3834, Val Loss: 0.3045, Time: 17.19s, LR: 0.001000
+Epoch 10/100, Train Loss: 0.3787, Val Loss: 0.3058, Time: 18.36s, LR: 0.001000
+Epoch 11/100, Train Loss: 0.3735, Val Loss: 0.3025, Time: 17.58s, LR: 0.001000
+Epoch 12/100, Train Loss: 0.3709, Val Loss: 0.2977, Time: 17.21s, LR: 0.001000
+Epoch 13/100, Train Loss: 0.3683, Val Loss: 0.2904, Time: 17.05s, LR: 0.001000
+Epoch 14/100, Train Loss: 0.3657, Val Loss: 0.2943, Time: 16.95s, LR: 0.001000
+Epoch 15/100, Train Loss: 0.3619, Val Loss: 0.2899, Time: 17.06s, LR: 0.001000
+Epoch 16/100, Train Loss: 0.3586, Val Loss: 0.2860, Time: 17.15s, LR: 0.001000
+Epoch 17/100, Train Loss: 0.3562, Val Loss: 0.2861, Time: 17.30s, LR: 0.001000
+Epoch 18/100, Train Loss: 0.3546, Val Loss: 0.2837, Time: 17.02s, LR: 0.001000
+Epoch 19/100, Train Loss: 0.3505, Val Loss: 0.2905, Time: 17.28s, LR: 0.001000
+Epoch 20/100, Train Loss: 0.3490, Val Loss: 0.2842, Time: 17.16s, LR: 0.001000
+Epoch 21/100, Train Loss: 0.3496, Val Loss: 0.2808, Time: 18.23s, LR: 0.001000
+Epoch 22/100, Train Loss: 0.3483, Val Loss: 0.2814, Time: 18.49s, LR: 0.001000
+Epoch 23/100, Train Loss: 0.3470, Val Loss: 0.2768, Time: 17.88s, LR: 0.001000
+Epoch 24/100, Train Loss: 0.3451, Val Loss: 0.2871, Time: 17.48s, LR: 0.001000
+Epoch 25/100, Train Loss: 0.3432, Val Loss: 0.2811, Time: 16.98s, LR: 0.001000
+Epoch 26/100, Train Loss: 0.3416, Val Loss: 0.2758, Time: 17.53s, LR: 0.001000
+Epoch 27/100, Train Loss: 0.3416, Val Loss: 0.2781, Time: 17.44s, LR: 0.001000
+Epoch 28/100, Train Loss: 0.3394, Val Loss: 0.2846, Time: 17.96s, LR: 0.001000
+Epoch 29/100, Train Loss: 0.3393, Val Loss: 0.2772, Time: 16.95s, LR: 0.001000
+Epoch 30/100, Train Loss: 0.3360, Val Loss: 0.2760, Time: 18.27s, LR: 0.001000
+Epoch 31/100, Train Loss: 0.3376, Val Loss: 0.2786, Time: 18.10s, LR: 0.001000
+Epoch 32/100, Train Loss: 0.3357, Val Loss: 0.2814, Time: 17.65s, LR: 0.000500
+Epoch 33/100, Train Loss: 0.3217, Val Loss: 0.2733, Time: 18.22s, LR: 0.000500
+Epoch 34/100, Train Loss: 0.3174, Val Loss: 0.2652, Time: 18.00s, LR: 0.000500
+Epoch 35/100, Train Loss: 0.3143, Val Loss: 0.2678, Time: 18.58s, LR: 0.000500
+Epoch 36/100, Train Loss: 0.3144, Val Loss: 0.2715, Time: 18.45s, LR: 0.000500
+Epoch 37/100, Train Loss: 0.3125, Val Loss: 0.2699, Time: 18.57s, LR: 0.000500
+Epoch 38/100, Train Loss: 0.3122, Val Loss: 0.2661, Time: 18.07s, LR: 0.000500
+Epoch 39/100, Train Loss: 0.3103, Val Loss: 0.2679, Time: 17.64s, LR: 0.000500
+Epoch 40/100, Train Loss: 0.3095, Val Loss: 0.2678, Time: 17.95s, LR: 0.000250
+Epoch 41/100, Train Loss: 0.3024, Val Loss: 0.2679, Time: 17.37s, LR: 0.000250
+Epoch 42/100, Train Loss: 0.3006, Val Loss: 0.2648, Time: 18.24s, LR: 0.000250
+Epoch 43/100, Train Loss: 0.2981, Val Loss: 0.2654, Time: 17.18s, LR: 0.000250
+Epoch 44/100, Train Loss: 0.2979, Val Loss: 0.2657, Time: 17.24s, LR: 0.000250
+Epoch 45/100, Train Loss: 0.3004, Val Loss: 0.2642, Time: 17.22s, LR: 0.000250
+Epoch 46/100, Train Loss: 0.2962, Val Loss: 0.2659, Time: 17.14s, LR: 0.000250
+Epoch 47/100, Train Loss: 0.2953, Val Loss: 0.2680, Time: 17.47s, LR: 0.000250
+Epoch 48/100, Train Loss: 0.2939, Val Loss: 0.2685, Time: 17.21s, LR: 0.000250
+Epoch 49/100, Train Loss: 0.2948, Val Loss: 0.2670, Time: 17.31s, LR: 0.000250
+Epoch 50/100, Train Loss: 0.2926, Val Loss: 0.2656, Time: 17.76s, LR: 0.000250
+Epoch 51/100, Train Loss: 0.2930, Val Loss: 0.2668, Time: 18.09s, LR: 0.000125
+Epoch 52/100, Train Loss: 0.2900, Val Loss: 0.2662, Time: 17.94s, LR: 0.000125
+Epoch 53/100, Train Loss: 0.2882, Val Loss: 0.2658, Time: 18.23s, LR: 0.000125
+Epoch 54/100, Train Loss: 0.2878, Val Loss: 0.2682, Time: 17.98s, LR: 0.000125
+Epoch 55/100, Train Loss: 0.2856, Val Loss: 0.2673, Time: 17.89s, LR: 0.000125
+Epoch 56/100, Train Loss: 0.2860, Val Loss: 0.2681, Time: 17.78s, LR: 0.000125
+Epoch 57/100, Train Loss: 0.2847, Val Loss: 0.2686, Time: 17.87s, LR: 0.000063
+Epoch 58/100, Train Loss: 0.2819, Val Loss: 0.2681, Time: 17.71s, LR: 0.000063
+Epoch 59/100, Train Loss: 0.2832, Val Loss: 0.2684, Time: 17.71s, LR: 0.000063
+Epoch 60/100, Train Loss: 0.2832, Val Loss: 0.2680, Time: 17.72s, LR: 0.000063
+Epoch 61/100, Train Loss: 0.2831, Val Loss: 0.2668, Time: 18.07s, LR: 0.000063
+Epoch 62/100, Train Loss: 0.2809, Val Loss: 0.2678, Time: 18.08s, LR: 0.000063
+Epoch 63/100, Train Loss: 0.2820, Val Loss: 0.2678, Time: 18.18s, LR: 0.000031
+Epoch 64/100, Train Loss: 0.2801, Val Loss: 0.2662, Time: 18.48s, LR: 0.000031
+Epoch 65/100, Train Loss: 0.2767, Val Loss: 0.2660, Time: 18.25s, LR: 0.000031
+Epoch 66/100, Train Loss: 0.2793, Val Loss: 0.2667, Time: 17.08s, LR: 0.000031
+Epoch 67/100, Train Loss: 0.2778, Val Loss: 0.2683, Time: 17.80s, LR: 0.000031
+Epoch 68/100, Train Loss: 0.2779, Val Loss: 0.2666, Time: 17.46s, LR: 0.000031
+Epoch 69/100, Train Loss: 0.2810, Val Loss: 0.2667, Time: 18.40s, LR: 0.000016
+Epoch 70/100, Train Loss: 0.2794, Val Loss: 0.2667, Time: 17.29s, LR: 0.000016
+Epoch 71/100, Train Loss: 0.2788, Val Loss: 0.2666, Time: 17.25s, LR: 0.000016
+Epoch 72/100, Train Loss: 0.2791, Val Loss: 0.2672, Time: 17.80s, LR: 0.000016
+Epoch 73/100, Train Loss: 0.2793, Val Loss: 0.2673, Time: 17.53s, LR: 0.000016
+Epoch 74/100, Train Loss: 0.2786, Val Loss: 0.2678, Time: 17.21s, LR: 0.000016
+Epoch 75/100, Train Loss: 0.2788, Val Loss: 0.2673, Time: 17.86s, LR: 0.000008
+Epoch 76/100, Train Loss: 0.2762, Val Loss: 0.2673, Time: 17.34s, LR: 0.000008
+Epoch 77/100, Train Loss: 0.2763, Val Loss: 0.2674, Time: 17.22s, LR: 0.000008
+Epoch 78/100, Train Loss: 0.2770, Val Loss: 0.2671, Time: 17.28s, LR: 0.000008
+Epoch 79/100, Train Loss: 0.2771, Val Loss: 0.2673, Time: 17.37s, LR: 0.000008
+Epoch 80/100, Train Loss: 0.2772, Val Loss: 0.2673, Time: 17.11s, LR: 0.000008
+Epoch 81/100, Train Loss: 0.2762, Val Loss: 0.2676, Time: 16.97s, LR: 0.000004
+Epoch 82/100, Train Loss: 0.2767, Val Loss: 0.2673, Time: 17.05s, LR: 0.000004
+Epoch 83/100, Train Loss: 0.2763, Val Loss: 0.2672, Time: 17.07s, LR: 0.000004
+Epoch 84/100, Train Loss: 0.2771, Val Loss: 0.2673, Time: 17.01s, LR: 0.000004
+Epoch 85/100, Train Loss: 0.2766, Val Loss: 0.2673, Time: 16.87s, LR: 0.000004
+Epoch 86/100, Train Loss: 0.2767, Val Loss: 0.2672, Time: 17.04s, LR: 0.000004
+Epoch 87/100, Train Loss: 0.2779, Val Loss: 0.2673, Time: 17.47s, LR: 0.000002
+Epoch 88/100, Train Loss: 0.2753, Val Loss: 0.2672, Time: 17.33s, LR: 0.000002
+Epoch 89/100, Train Loss: 0.2774, Val Loss: 0.2672, Time: 17.19s, LR: 0.000002
+Epoch 90/100, Train Loss: 0.2746, Val Loss: 0.2671, Time: 17.11s, LR: 0.000002
+Epoch 91/100, Train Loss: 0.2760, Val Loss: 0.2671, Time: 17.25s, LR: 0.000002
+Epoch 92/100, Train Loss: 0.2773, Val Loss: 0.2670, Time: 17.12s, LR: 0.000002
+Epoch 93/100, Train Loss: 0.2764, Val Loss: 0.2671, Time: 17.28s, LR: 0.000001
+Epoch 94/100, Train Loss: 0.2759, Val Loss: 0.2671, Time: 17.34s, LR: 0.000001
+Epoch 95/100, Train Loss: 0.2755, Val Loss: 0.2671, Time: 17.88s, LR: 0.000001
+Epoch 96/100, Train Loss: 0.2760, Val Loss: 0.2671, Time: 18.48s, LR: 0.000001
+Epoch 97/100, Train Loss: 0.2770, Val Loss: 0.2672, Time: 17.33s, LR: 0.000001
+Epoch 98/100, Train Loss: 0.2782, Val Loss: 0.2671, Time: 17.39s, LR: 0.000001
+Epoch 99/100, Train Loss: 0.2761, Val Loss: 0.2672, Time: 18.56s, LR: 0.000000
+Epoch 100/100, Train Loss: 0.2764, Val Loss: 0.2672, Time: 17.34s, LR: 0.000000
+Training completed in 1761.62 seconds
+Model and scalers saved successfully at models/torcs_lstm_controller.pth
